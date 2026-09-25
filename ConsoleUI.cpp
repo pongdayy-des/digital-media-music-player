@@ -3,6 +3,8 @@
 #include "Podcast.h"
 #include "Audiobook.h"
 #include "FileManager.h"
+#include "ConsoleColors.h"
+#include "Banner.h"
 #include <iostream>
 #include <limits>
 #include <string>
@@ -86,7 +88,17 @@ void ConsoleUI::run() {
     bool running = true;
     while (running) {
         std::cout << "\n========================================\n";
-        std::cout << "       DIGITAL MEDIA & MUSIC PLAYER\n";
+        std::cout << "\n";
+        Banner::printBox({
+            "DIGITAL MEDIA PLAYER",
+            "",
+            "C++17 Console Music & Media System",
+            "",
+            "TEAM   : Nhom 6",
+            "STATUS : ACTIVE",
+            "VERSION: v1.0"
+        });
+        std::cout << Console::BOLD_CYAN << "[?] MAIN MENU" << Console::RESET << "\n";
         std::cout << "========================================\n";
         std::cout << "1. Media Library\n";
         std::cout << "2. Playlist Management\n";
